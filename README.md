@@ -1,6 +1,6 @@
 # Django template for internal apps
 
-This template makes it really easy to build internal company tools with Django. It uses Google auth to ensure that only employees can access it.
+This is a template for building internal company tools. It uses Google auth for signin and will check that you are authenticating with an account that is your company's domain so only employees can access the tool.
 
 ## Getting started
 
