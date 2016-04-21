@@ -1,0 +1,20 @@
+{% extends 'bootstrap3/bootstrap3.html' %}
+
+{% load bootstrap3 %}
+{% load staticfiles %}
+
+{% block bootstrap3_title %}{% block title %}{% endblock %} | Site name{% endblock %}
+
+{% block bootstrap3_extra_head %}
+<link rel="stylesheet" href="{% static "css/main.css" %}" media="screen" title="no title" charset="utf-8">
+{% block extra_head %}{% endblock %}
+{% endblock %}
+
+{% block bootstrap3_content %}
+    <div class="container">
+        {% autoescape off %}{% bootstrap_messages %}{% endautoescape %}
+
+        {% block content %}(no content){% endblock %}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  <h1 class="page-header">Hello World</h1>
+  <p>You're logged in as {{ user.get_full_name }}. <a href="{% url "logout" %}">Logout</a></p>
+{% endblock %}

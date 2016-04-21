@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+  <div class="login-container">
+    <a href="{% url 'social:begin' 'google-oauth2' %}{% if request.GET.next %}?next={{ request.GET.next }}{% endif %}" class="btn btn-primary btn-lg">Login with Google</a>
+  </div>
+{% endblock %}
