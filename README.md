@@ -6,7 +6,7 @@ This template makes it really easy to build internal company tools with Django. 
 
 To get started (replace `myinternalapp` with the name of your app):
 
-    $ docker run -it --rm -v "$PWD":/usr/src/app -w /usr/src/app django django-admin.py startproject --template /usr/src/template myinternalapp
+    $ docker run -it --rm -v "$PWD":/usr/src/app -w /usr/src/app django django-admin.py startproject --template https://github.com/bfirsh/django-internal-app-template/zipball/master myinternalapp
     $ cd myinternalapp
 
 This readme file is now in your app's directory. You can delete this top bit and everything that follows is the start of your app's readme.
