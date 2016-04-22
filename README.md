@@ -20,7 +20,7 @@ Description of {{ project_name }}.
 
 Install Docker for Mac or Windows.
 
-Create a new application in [Google's developer console](https://console.developers.google.com) and enable the Google+ APIs. Go to the "Credentials" tab, then create some new OAuth credentials with these settings:
+Create a new application in [Google's developer console](https://console.developers.google.com) and [enable the Google+ APIs](https://console.developers.google.com/apis/api/plus/overview). Go to the "Credentials" tab, then create some new OAuth credentials with these settings:
 
  * Application type: Web application
  * Authorized JavaScript origins: `http://www.127.0.0.1.xip.io:8000`
