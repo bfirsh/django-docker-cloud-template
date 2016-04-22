@@ -42,7 +42,7 @@ Run this to expose all your app's ports on 127.0.0.1:
 
 Do the initial database migration:
 
-    $ docker-compose run web ./manage.py migrate
+    $ docker-compose run web python manage.py migrate
 
 Then to run the app:
 
