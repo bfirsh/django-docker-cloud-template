@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
 {% block title %}Login{% endblock %}
 
+{% load staticfiles %}
+
 {% block content %}
   <div class="login-container">
-    <a href="{% url 'social:begin' 'google-oauth2' %}{% if request.GET.next %}?next={{ request.GET.next }}{% endif %}" class="btn btn-primary btn-lg">Login with Google</a>
+    <a href="{% url 'social:begin' 'google-oauth2' %}{% if request.GET.next %}?next={{ request.GET.next }}{% endif %}">
+      <img src="{% static "images/btn_google_signin_dark_normal_web.png" %}" alt="Sign in with Google">
+    </a>
   </div>
 {% endblock %}
