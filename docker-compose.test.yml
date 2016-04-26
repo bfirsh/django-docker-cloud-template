@@ -1,0 +1,12 @@
+# https://docs.docker.com/docker-cloud/feature-reference/automated-testing/
+version: '2'
+services:
+  db:
+    image: postgres
+  sut:
+    build: .
+    command: sh -c "while ! nc -w 1 -z db 5432; do sleep 1; done; python manage.py test"
+    links:
+      - db
+    environment:
+      SECRET_KEY: "not secure only use for development"

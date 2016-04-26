@@ -1,4 +1,5 @@
 FROM python:2.7
+RUN apt-get update -qq && apt-get install -qy netcat
 ENV PYTHONUNBUFFERED 1
 RUN mkdir /code
 WORKDIR /code
