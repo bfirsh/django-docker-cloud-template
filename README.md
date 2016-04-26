@@ -56,4 +56,9 @@ Your app is now available at http://www.127.0.0.1.xip.io:8000
 
 First, you'll need to create a Google OAuth app similar to above, but using your app's public URL as the authorized URLs.
 
-Next, upload `docker-cloud.yml` to Docker Cloud, filling in the environment section of your stack file with the OAuth credentials and `SECRET_KEY` with a random string.
+Next, upload `docker-cloud.yml` to Docker Cloud, filling in:
+
+ - `SOCIAL_AUTH_GOOGLE_OAUTH2_KEY` and `SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET` with your OAuth credentials
+ - `SOCIAL_AUTH_GOOGLE_OAUTH2_WHITELISTED_DOMAINS` with your company's Google Apps domain name
+ - `SECRET_KEY` with a random string (run `openssl rand -base64 64` to generate)
+ - `ALLOWED_HOSTS` with the hostname that the app is running on
