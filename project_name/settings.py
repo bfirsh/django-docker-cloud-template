@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap3',
-    'social.apps.django_app.default',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -69,8 +68,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'social.apps.django_app.context_processors.backends',
-                'social.apps.django_app.context_processors.login_redirect',
             ],
         },
     },
@@ -106,16 +103,11 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 AUTHENTICATION_BACKENDS = (
-    'social.backends.google.GoogleOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 )
 
 LOGIN_REDIRECT_URL = '/'
-LOGIN_URL = '/login'
-
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = env('SOCIAL_AUTH_GOOGLE_OAUTH2_KEY', default='')
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = env('SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET', default='')
-SOCIAL_AUTH_GOOGLE_OAUTH2_WHITELISTED_DOMAINS = env('SOCIAL_AUTH_GOOGLE_OAUTH2_WHITELISTED_DOMAINS')
+# LOGIN_URL = '/login/'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/

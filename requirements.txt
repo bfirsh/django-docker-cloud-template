@@ -1,7 +1,6 @@
 Django==1.9.5
 psycopg2==2.6.1
 django-bootstrap3==7.0.1
-python-social-auth==0.2.14
 django-environ==0.4.0
 gunicorn==19.4.5
 whitenoise==3.0
